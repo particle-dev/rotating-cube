@@ -84,30 +84,30 @@ PVector project(float[][] p) {
 }
 
 float[][] rotateX(float[][] p, float angle) {
-  float[][] rotationZ = {
+  float[][] rotation = {
     { 1, 0, 0}, 
     { 0, cos(angle), -sin(angle)}, 
     { 0, sin(angle), cos(angle)}
   };
-  return matrixMultiplication(rotationZ, p);
+  return matrixMultiplication(rotation, p);
 }
 
 float[][] rotateY(float[][] p, float angle) {
-  float[][] rotationZ = {
+  float[][] rotation = {
     { cos(angle), 0, sin(angle)}, 
     { 0, 1, 0}, 
     { -sin(angle), 0, cos(angle)}
   };
-  return matrixMultiplication(rotationZ, p);
+  return matrixMultiplication(rotation, p);
 }
 
 float[][] rotateZ(float[][] p, float angle) {
-  float[][] rotationZ = {
+  float[][] rotation = {
     { cos(angle), -sin(angle), 0}, 
     { sin(angle), cos(angle), 0}, 
     { 0, 0, 1}
   };
-  return matrixMultiplication(rotationZ, p);
+  return matrixMultiplication(rotation, p);
 }
 
 float[][] matrixMultiplication(float[][] a, float[][] b) {
